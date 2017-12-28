@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapKit___ZoomScale" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Vpt-9J-aEx">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqD-Qa-SEV">
+                                <rect key="frame" x="0.0" y="20" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="22C-Eo-M2X"/>
+                                    <constraint firstAttribute="width" constant="160" id="vjo-L5-SN6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="DXY-R8-eWa">
+                                <rect key="frame" x="158" y="20" width="199" height="31"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="t5A-q8-PLu"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DXY-R8-eWa" secondAttribute="trailing" constant="20" id="1b6-Lf-1mz"/>
+                            <constraint firstItem="Vpt-9J-aEx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hao-pT-P5f"/>
+                            <constraint firstItem="mqD-Qa-SEV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MnB-my-A3t"/>
+                            <constraint firstItem="DXY-R8-eWa" firstAttribute="leading" secondItem="mqD-Qa-SEV" secondAttribute="trailing" id="dNo-A2-QQe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vpt-9J-aEx" secondAttribute="bottom" id="duZ-5T-6Y8"/>
+                            <constraint firstItem="Vpt-9J-aEx" firstAttribute="top" secondItem="mqD-Qa-SEV" secondAttribute="bottom" id="iGD-rK-DOZ"/>
+                            <constraint firstItem="mqD-Qa-SEV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k6O-Bv-PSk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vpt-9J-aEx" secondAttribute="trailing" id="skt-FV-7Ca"/>
+                            <constraint firstItem="DXY-R8-eWa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xhb-bh-k2Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="mqD-Qa-SEV" id="o9m-MT-vw2"/>
+                        <outlet property="mapView" destination="Vpt-9J-aEx" id="XUu-bc-DK3"/>
+                        <outlet property="slider" destination="DXY-R8-eWa" id="CrF-fd-Gze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
